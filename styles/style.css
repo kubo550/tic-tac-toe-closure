@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,13 +22,14 @@ body {
           flex-direction: column;
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
 }
 
 .game {
   display: -ms-grid;
   display: grid;
   width: 309px;
-  height: 309px;
+  height: 308px;
   -ms-grid-rows: (1fr)[3];
   -ms-grid-columns: (100px)[3];
       grid-template: repeat(3, 1fr)/repeat(3, 100px);
@@ -37,7 +39,9 @@ body {
 }
 
 .square {
-  background-color: #4dd42c;
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+  background-color: black;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,20 +53,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 4rem;
+  color: #df7f02;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .square:hover {
-  background-color: #5adb3a;
-}
-
-.info {
-  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .X:hover,
 .O:hover {
   cursor: default;
-  background-color: #4dd42c;
+  background-color: black;
 }
 
 .X::before {
@@ -71,5 +74,21 @@ body {
 
 .O::before {
   content: "O";
+}
+
+.info {
+  margin: 30px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 300px;
+  color: #df7f02;
+  font-weight: 500;
+}
+
+.info .points {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
