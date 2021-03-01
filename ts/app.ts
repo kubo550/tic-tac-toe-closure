@@ -3,7 +3,7 @@ import { calculateWinner } from "./calculateWinner.js";
 
 const init = (squares: NodeListOf<Element>) => {
     const output = document.querySelector(".output")!;
-    const gameboard: Player[] = ["", "", "", "", "", "", "", "", ""];
+    const gameboard: Player[] = Array(9).fill("");
     let winner: Player = "";
     let round = 1;
 
