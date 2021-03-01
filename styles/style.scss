@@ -1,0 +1,55 @@
+$primary: rgb(77, 212, 44);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game {
+  display: grid;
+  width: 309px;
+  height: 309px;
+  grid-template: repeat(3, 1fr) / repeat(3, 100px);
+  gap: 3px;
+  background-color: rgb(223, 127, 2);
+  border: 2px solid black;
+}
+.square {
+  background-color: $primary;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.square:hover {
+  background-color: rgb(90, 219, 58);
+}
+
+.info {
+  font-weight: bold;
+}
+
+.X:hover,
+.O:hover {
+  cursor: default;
+  background-color: $primary;
+}
+
+.X::before {
+  content: "X";
+}
+
+.O::before {
+  content: "O";
+}
