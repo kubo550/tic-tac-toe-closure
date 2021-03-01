@@ -1,13 +1,11 @@
 export type Player = "" | "X" | "O";
-import { calculateWinner } from "./calculateWinner";
+import { calculateWinner } from "./calculateWinner.js";
 
 const init = (squares: NodeListOf<Element>) => {
-    const output = document.querySelector(".output");
+    const output = document.querySelector(".output")!;
     const gameboard: Player[] = ["", "", "", "", "", "", "", "", ""];
-    const player1 = "X";
-    const player2 = "O";
-    let round = 1;
     let winner: Player = "";
+    let round = 1;
 
     squares.forEach(s => s.classList.remove("X", "O"));
 
@@ -15,14 +13,16 @@ const init = (squares: NodeListOf<Element>) => {
         if (gameboard[i] || winner) {
             return;
         }
-        const player = round % 2 ? player1 : player2;
+
+        const player = round % 2 ? "X" : "O";
         gameboard[i] = player;
-        // @ts-ignore
-        e.target!.classList.add(player);
+        (e.target as HTMLTextAreaElement).classList.add(player);
         winner = calculateWinner(gameboard);
+
         if (winner) {
-            return alert(`The Winner is ${winner}`);
+            return console.log(`The Winner is ${winner}`);
         }
+
         round += 1;
     };
 };
