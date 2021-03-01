@@ -1,5 +1,7 @@
-$primary: rgb(77, 212, 44);
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
 
+$primary: rgb(0, 0, 0);
+$secondary: rgb(223, 127, 2);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,31 +15,32 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $primary;
 }
 
 .game {
   display: grid;
   width: 309px;
-  height: 309px;
+  height: 308px;
   grid-template: repeat(3, 1fr) / repeat(3, 100px);
   gap: 3px;
-  background-color: rgb(223, 127, 2);
+  background-color: $secondary;
   border: 2px solid black;
 }
 .square {
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
   background-color: $primary;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4rem;
+  color: $secondary;
+  transition: 0.4s;
 }
 .square:hover {
-  background-color: rgb(90, 219, 58);
-}
-
-.info {
-  font-weight: bold;
+  background-color: rgba(transparent, 0.7);
 }
 
 .X:hover,
@@ -52,4 +55,17 @@ body {
 
 .O::before {
   content: "O";
+}
+
+.info {
+  margin: 30px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  color: $secondary;
+  font-weight: 500;
+
+  .points {
+    text-align: center;
+  }
 }
