@@ -1,3 +1,3 @@
 # tic-tac-toe using closure pure TypeScript 
 
-Its my project how to use __closure__ in practice.
+Its my project how to use __closure__ in javascript in practice.
