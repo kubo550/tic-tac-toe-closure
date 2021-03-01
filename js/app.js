@@ -1,7 +1,7 @@
 import { calculateWinner } from "./calculateWinner.js";
 const init = (squares) => {
     const output = document.querySelector(".output");
-    const gameboard = ["", "", "", "", "", "", "", "", ""];
+    const gameboard = Array(9).fill("");
     let winner = "";
     let round = 1;
     squares.forEach(s => s.classList.remove("X", "O"));
