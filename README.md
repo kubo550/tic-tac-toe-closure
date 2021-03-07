@@ -4,4 +4,4 @@ Its my project how to use [closure](https://developer.mozilla.org/en-US/docs/Web
 
 ### Previev 
 
-Code preview on [codesandbox](https://codesandbox.io/s/github/kubo550/tic-tac-toe-vanilla)
+Code preview on [codesandbox](https://codesandbox.io/s/github/kubo550/tic-tac-toe-vanilla).
