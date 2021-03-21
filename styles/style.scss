@@ -51,10 +51,12 @@ body {
 
 .X::before {
   content: "X";
+  animation: showUp 0.3s linear forwards;
 }
 
 .O::before {
   content: "O";
+  animation: showUp 0.3s linear forwards;
 }
 
 .info {
@@ -96,5 +98,14 @@ body {
   to {
     opacity: 1;
     transform: translateY(30px);
+  }
+}
+
+@keyframes showUp {
+  from {
+    font-size: 2rem;
+  }
+  to {
+    font-size: 4rem;
   }
 }

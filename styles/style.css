@@ -70,10 +70,14 @@ body {
 
 .X::before {
   content: "X";
+  -webkit-animation: showUp 0.3s linear forwards;
+          animation: showUp 0.3s linear forwards;
 }
 
 .O::before {
   content: "O";
+  -webkit-animation: showUp 0.3s linear forwards;
+          animation: showUp 0.3s linear forwards;
 }
 
 .info {
@@ -131,6 +135,24 @@ body {
     opacity: 1;
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
+  }
+}
+
+@-webkit-keyframes showUp {
+  from {
+    font-size: 2rem;
+  }
+  to {
+    font-size: 4rem;
+  }
+}
+
+@keyframes showUp {
+  from {
+    font-size: 2rem;
+  }
+  to {
+    font-size: 4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
