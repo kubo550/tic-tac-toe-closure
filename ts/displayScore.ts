@@ -9,7 +9,7 @@ export const displayScore = (
     const scoreElements = ["X", "tie", "O"].map(
         document.getElementById.bind(document)
     );
-    scoreElements!.forEach(
+    scoreElements?.forEach(
         el => (el!.textContent = scores.get(el?.id as Player)?.toString() as string)
     );
     resBtn.classList.remove("hidden");
