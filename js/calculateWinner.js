@@ -15,5 +15,8 @@ export const calculateWinner = (squares) => {
             return squares[a];
         }
     }
+    if (squares.every(Boolean)) {
+        return "tie";
+    }
     return '';
 };

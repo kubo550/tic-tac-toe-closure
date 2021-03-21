@@ -1,5 +1,5 @@
-import { Player } from "./app"
-export const calculateWinner = (squares: Player[]): Player => {
+import { Player, Winner } from "./app"
+export const calculateWinner = (squares: Player[]): Winner => {
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -13,8 +13,11 @@ export const calculateWinner = (squares: Player[]): Player => {
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return squares[a];
+            return squares[a]
         }
+    }
+    if (squares.every(Boolean)) {
+        return "tie"
     }
     return '';
 };
