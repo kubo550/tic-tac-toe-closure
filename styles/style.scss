@@ -25,7 +25,7 @@ body {
   grid-template: repeat(3, 1fr) / repeat(3, 100px);
   gap: 3px;
   background-color: $secondary;
-  border: 2px solid black;
+  // border: 2px solid black;
 }
 .square {
   font-family: "Comfortaa", cursive;
@@ -67,5 +67,34 @@ body {
 
   .points {
     text-align: center;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#reset {
+  padding: 10px 20px;
+  background-color: $secondary;
+  font-weight: bold;
+  animation: animate 1s linear forwards;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  border: 20px solid rgba(0, 0, 0, 0.7);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(30px);
   }
 }
