@@ -35,7 +35,6 @@ body {
       grid-template: repeat(3, 1fr)/repeat(3, 100px);
   gap: 3px;
   background-color: #df7f02;
-  border: 2px solid black;
 }
 
 .square {
@@ -90,5 +89,47 @@ body {
 
 .info .points {
   text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#reset {
+  padding: 10px 20px;
+  background-color: #df7f02;
+  font-weight: bold;
+  -webkit-animation: animate 1s linear forwards;
+          animation: animate 1s linear forwards;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  border: 20px solid rgba(0, 0, 0, 0.7);
+}
+
+#reset:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
 }
 /*# sourceMappingURL=style.css.map */
