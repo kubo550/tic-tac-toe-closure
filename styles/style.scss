@@ -20,8 +20,8 @@ body {
 
 .game {
   display: grid;
-  width: 309px;
-  height: 308px;
+  width: 306px;
+  height: 306px;
   grid-template: repeat(3, 1fr) / repeat(3, 100px);
   gap: 3px;
   background-color: $secondary;
@@ -42,7 +42,7 @@ body {
 .square:hover {
   background-color: rgba(transparent, 0.7);
 }
-
+.gameOver:hover,
 .X:hover,
 .O:hover {
   cursor: default;
@@ -80,7 +80,7 @@ body {
   font-weight: bold;
   animation: animate 1s linear forwards;
   position: absolute;
-  top: 40%;
+  top: 36%;
   z-index: 10;
   border: 20px solid rgba(0, 0, 0, 0.7);
 
