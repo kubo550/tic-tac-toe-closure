@@ -11,12 +11,11 @@ const scores = new Map([
 let round = 0;
 const init = (squares) => {
     // Deklaracja zmiennych na całą nową rundę
-    const [player1, player2] = round % 2 ? players : players.reverse(); // Wybranie kto zaczyna względem, czy runda jest parzysta
+    const [player1, player2] = round++ % 2 ? players : players.reverse(); // Wybranie kto zaczyna względem, czy runda jest parzysta
     const gameboard = Array(9).fill(""); // tworzenie planszy, czyli 9 elementowej pustej tablicy
     let winner = "";
     let moves = 1;
     squares.forEach(s => s.classList.remove("X", "O", "gameOver")); // Oczyszczanie planszy z poprzedniej rundy
-    round++;
     // Przykład closure -> domknięcia, czyli zwracamy funckję, która będzie wykonowana po kliknięciu na któreś z pól
     return (e, i) => {
         // Jeśli dane pole jest już zajęte, lub ktoś wygrał, nie robimy nic
