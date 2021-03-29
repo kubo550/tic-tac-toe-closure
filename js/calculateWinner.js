@@ -1,3 +1,5 @@
+// Funckja pochodzi z tutoriala reactjs, trochę ją zmodyfikowałem na potrzeby mojego projektu.
+// Jest to według mnie idealne podejście do tego probelmu, dlatego ją tutaj zastosowałem
 export const calculateWinner = (squares) => {
     const lines = [
         [0, 1, 2],
