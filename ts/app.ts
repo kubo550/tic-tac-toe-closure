@@ -19,13 +19,13 @@ const init = (
     squares: NodeListOf<Element>
 ): ((e: Event, i: number) => void) => {
     // Deklaracja zmiennych na całą nową rundę
-    const [player1, player2] = round % 2 ? players : players.reverse(); // Wybranie kto zaczyna względem, czy runda jest parzysta
+    const [player1, player2] = round++ % 2 ? players : players.reverse(); // Wybranie kto zaczyna względem, czy runda jest parzysta
     const gameboard: Player[] = Array(9).fill(""); // tworzenie planszy, czyli 9 elementowej pustej tablicy
     let winner: Winner = "";
     let moves = 1;
 
     squares.forEach(s => s.classList.remove("X", "O", "gameOver")); // Oczyszczanie planszy z poprzedniej rundy
-    round++;
+
 
     // Przykład closure -> domknięcia, czyli zwracamy funckję, która będzie wykonowana po kliknięciu na któreś z pól
     return (e: Event, i: number) => {
