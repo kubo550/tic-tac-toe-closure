@@ -1,6 +1,13 @@
 import { Player, Winner } from "./app"
+
+type Line = [number, number, number]
+
+
+// Funckja pochodzi z tutoriala reactjs, trochę ją zmodyfikowałem na potrzeby mojego projektu.
+// Jest to według mnie idealne podejście do tego probelmu, dlatego ją tutaj zastosowałem
+
 export const calculateWinner = (squares: Player[]): Winner => {
-    const lines = [
+    const lines: Line[] = [
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
