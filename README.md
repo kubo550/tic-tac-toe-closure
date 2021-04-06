@@ -4,4 +4,4 @@ Its my project how to use [closure](https://developer.mozilla.org/en-US/docs/Web
 
 ### Previev 
 
-[kubo550.github.io/tic-tac-toe-closure/](https://kubo550.github.io/tic-tac-toe-closure/)
+Hosting on Github Pages [kubo550.github.io/tic-tac-toe-closure/](https://kubo550.github.io/tic-tac-toe-closure/)
